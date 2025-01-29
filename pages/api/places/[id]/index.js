@@ -8,9 +8,7 @@ export default async function handler(request, response) {
 
   if (request.method === "GET") {
     const place = await Places.findById(id);
-
     response.status(200).json(place);
-    console.log("place_", place);
     return;
   }
 
